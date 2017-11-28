@@ -58,7 +58,7 @@ multiply(4, 3, function(answer){
 
   //Code Here 
 
-
+var contains = (arr, name, cf) => arr.indexOf(name) > -1 ? cf(true): cf(false);
 
 
 contains(names, 'Colt', function(result){

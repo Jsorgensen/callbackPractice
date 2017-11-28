@@ -77,14 +77,14 @@ contains(names, 'Colt', function(result){
   //Code Here
 var uniq = (arr, cf) => {
   var hashmap = {};
-  return arr.filter(item => {
+  return cf(arr.filter(item => {
     if(item in hashmap){
       hashmap[item]++;
       return false;
     }
     hashmap[item] = 1;
     return true;
-  });
+  }));
 }
 
 
@@ -109,7 +109,7 @@ each(names, function(item, indice){
 // When the correct user object is found, invoke the callback with the user object as an argument.
 
 // Code here
-
+var getUserById = (arr, id, cf) => cf(arr.filter(item => item.id === id)[0]);
 
 
 var users = [

@@ -19,7 +19,7 @@ and WHAT YOU SHOULD WRITE is the sayHi function that makes the code above work:
 // 1. Write a function called first that takes in two parameters, an array and a callback function, then invokes the callback function, passing in the first element in the array as it's argument.  (see the sayHi function on line 12 for reference)
 
   // Code Here 
-
+var first = (arr, cf) => cf(arr[0]);
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
@@ -27,7 +27,6 @@ first(names, function(firstName){
   console.log('The first name in names is ' + firstName);
   return firstName;
 });
-
 
 
 // 2. Write a function called last that takes in an array and a callback function, then invokes the callback, passing in the last element in the array as the argument.

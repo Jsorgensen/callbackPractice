@@ -75,7 +75,10 @@ contains(names, 'Colt', function(result){
 // Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
 
   //Code Here
-
+var uniq = (arr, cf) => {
+  var hashmap;
+  arr.filter(item => hashmap[item] ? false: hasmap[item] = 1)
+}
 
 
 uniq(names, function(uniqArr){

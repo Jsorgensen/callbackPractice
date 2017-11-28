@@ -76,8 +76,15 @@ contains(names, 'Colt', function(result){
 
   //Code Here
 var uniq = (arr, cf) => {
-  var hashmap;
-  arr.filter(item => hashmap[item] ? false: hasmap[item] = 1)
+  var hashmap = {};
+  return arr.filter(item => {
+    if(item in hashmap){
+      hashmap[item]++;
+      return false;
+    }
+    hashmap[item] = 1;
+    return true;
+  });
 }
 
 
@@ -89,7 +96,7 @@ uniq(names, function(uniqArr){
 // 6. Write a function called each that takes in an array of names and a callback function. For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 
     //Code Here 
-
+var each = (arr, cf) => arr.map(item => cf(item, arr.indexOf(item)));
 
 
 each(names, function(item, indice){
